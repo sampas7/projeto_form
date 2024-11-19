@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login NERV</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="https://m.media-amazon.com/images/I/41-qu8iFxDL._AC_UF894,1000_QL80_.jpg" type="image/png">
+</head>
+<body>
+    <div class="cadastro-container">
+        <form id="form-cadastro" class="cadastro-form">
+            <h1>Cadastro NERV</h1>
+            <div class="form-group">
+                <label for="username">Usuário</label>
+                <input required ="text" id="username" name="username" placeholder="Digite seu usuário">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                <!-- <input required ="text" id="password-display" placeholder="Digite sua senha"> -->
+            </div>
+            
+            <div class="form-group">
+                <label for="passwordconf">Repetir senha</label>
+                <input type="password" id="passwordconf" name="password" placeholder="Digite novamente a senha" required>
+                <!-- <input required ="text" id="passwordconf-display" placeholder="Confirme sua senha"> -->
+            </div>
+
+            <button type="submit">Cadastrar</button>
+
+            <div class="clique-voltar">
+                <a href="index.html">← Voltar</a>
+            </div>
+            
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- <script src="password.js"></script> -->
+    <script src="signup.js"></script>
+</body>
+</html>

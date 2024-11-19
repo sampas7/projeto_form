@@ -12,12 +12,28 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    color: white;
+    background-image: url('https://i.pinimg.com/736x/e3/91/29/e391293a77585f5aa3e634b607d51030.jpg');
+    background-size: cover;
+    position: relative
+
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    pointer-events: none; /* Permite interação com elementos abaixo */
+    z-index: 1;
 }
 
 /* Contêiner do formulário */
-.login-container {
+.login-container, .cadastro-container, .home-container {
+    position: relative;
+    z-index: 2; /* Garante que o formulário fique acima da sobreposição */
     background: white;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
@@ -26,8 +42,12 @@ body {
     color: #333;
 }
 
+.home-container {
+    width: 500px;
+}
+
 /* Estilização do formulário */
-.login-form h1 {
+.login-form h1, .cadastro-form h1, .home-form h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 24px;
@@ -44,6 +64,17 @@ label {
     font-weight: bold;
 }
 
+.clique-cadastro, a, .clique-voltar, .clique-index {
+    margin-top: 10%;
+    text-align: center;
+    text-decoration: none;
+    color:black
+    
+}
+
+.clique-cadastro a:hover {
+    text-decoration: underline; /* Opcional: adiciona sublinhado ao passar o mouse */
+}
 /* Botão */
 button {
     width: 100%;
@@ -58,7 +89,8 @@ button {
 }
 
 button:hover {
-    background: #2575fc;
+    background: #00ff22;
+    color:black
 }
 
 input {
@@ -69,4 +101,3 @@ input {
     font-family: monospace;
     font-size: 16px;
 }
-
