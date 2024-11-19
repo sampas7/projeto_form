@@ -13,7 +13,7 @@ document.querySelector('.login-form').addEventListener('submit', function(event)
 
       } else {
 
-        alert("Usuário ou senha incorretos!");
+        alert("Verifique se o usuário e/ou senha inseridos estão corretos.");
         
       }
 });
